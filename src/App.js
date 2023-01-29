@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
-import Home from "./components/Home";
+import Index from "./components/Home";
 import Blogs from "./components/Blogs";
 import Contact from "./components/Contact";
 import NoPage from "./components/NoPage";
@@ -11,9 +11,9 @@ class App extends React.Component {
     return (
       <BrowserRouter>
       <Routes>
-        <Route path="/" element={<NavBar />}>
-          <Route index element={<Home />} />
-          <Route path="Home" element={<Home />} />
+        <Route path="/app" element={<NavBar />}>
+          <Route index element={<Index />} />
+          <Route path="Home" element={<Index />} />
           <Route path="blogs" element={<Blogs />} />
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<NoPage />} />
