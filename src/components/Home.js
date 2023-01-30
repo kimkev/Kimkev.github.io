@@ -1,5 +1,5 @@
-const Index = () => {
-    return <h1>Index</h1>;
+const Home = () => {
+    return <h1>Home</h1>;
   };
   
-export default Index;
+export default Home;
