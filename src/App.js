@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
-import Home from "./components/Home";
-import Blogs from "./components/Blogs";
-import Contact from "./components/Contact";
-import NoPage from "./components/NoPage";
+import Home from "./pages/Home";
+import Blogs from "./pages/Blogs";
+import Contact from "./pages/Contact";
+import NoPage from "./pages/NoPage";
 
 class App extends React.Component {
   render() {
