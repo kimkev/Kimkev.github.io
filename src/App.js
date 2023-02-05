@@ -5,21 +5,29 @@ import Home from "./pages/Home";
 import Blogs from "./pages/Blogs";
 import Contact from "./pages/Contact";
 import NoPage from "./pages/NoPage";
+import Footer from './components/Footer';
+// import Header from './components/Header';
 
 class App extends React.Component {
   render() {
     return (
-      <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<NavBar />}>
-          <Route index element={<Home />} />
-          <Route path="Home" element={<Home />} />
-          <Route path="blogs" element={<Blogs />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="*" element={<NoPage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+      <>
+      {/* Header not needed right now
+        <Header title="Header" subtitle="Header Subtitle" /> */}
+        <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<NavBar />}>
+                <Route index element={<Home />} />
+                <Route path="Home" element={<Home />} />
+                <Route path="blogs" element={<Blogs />} />
+                <Route path="contact" element={<Contact />} />
+                <Route path="*" element={<NoPage />} />
+              </Route>
+            </Routes>
+          </BrowserRouter>
+        <Footer note="Footer" />
+      </>
+
     );
   }
 }

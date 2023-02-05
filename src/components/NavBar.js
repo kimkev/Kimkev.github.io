@@ -1,12 +1,12 @@
 import { Outlet, Link } from "react-router-dom";
-import '../styles/NavBar.css'
+import './NavBar.css';
 
 const NavBar = () => {
   return (
     <>
       <nav className='navigation'>
         <Link to="/Home" className="brand-name">
-          Kevin Kim
+          App
         </Link>
         <button className="hamburger">
           {/* icon from heroicons.com */}
