@@ -23,6 +23,7 @@ class App extends React.Component {
                 <Route path="blogs" element={<Blogs />} />
                 <Route path="contact" element={<Contact />} />
                 <Route path="TicTacToe" element={<TicTacToe />} />
+                <Route path="TypingGame" element={<TypingGame />} />
                 <Route path="*" element={<NoPage />} />
               </Route>
             </Routes>

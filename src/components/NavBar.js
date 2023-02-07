@@ -38,6 +38,9 @@ const NavBar = () => {
             <li>
               <Link to="/TicTacToe">TicTacToe</Link>
             </li>
+            <li>
+              <Link to="/TypingGame">TypingGame</Link>
+            </li>
           </ul>
         </div>
       </nav>
