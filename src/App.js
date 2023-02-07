@@ -7,6 +7,7 @@ import Contact from "./pages/Contact";
 import NoPage from "./pages/NoPage";
 import Footer from './components/Footer';
 import TicTacToe from './pages/TicTacToe';
+import TypingGame from './pages/TypingGame';
 // import Header from './components/Header';
 
 class App extends React.Component {
