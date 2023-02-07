@@ -26,6 +26,7 @@ const TypingGame = () => {
     };
 
     const resetGame = () => {
+        setGameStart(false);
         setText("");
         setUserText("");
         setTimeRemaining(timeLimit);
