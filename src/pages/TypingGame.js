@@ -2,69 +2,78 @@ import React, { useState, useEffect } from "react";
 import "./TypingGame.css";
 
 const TypingGame = () => {
-  const [text, setText] = useState("");
-  const [userText, setUserText] = useState("");
-  const [timeRemaining, setTimeRemaining] = useState(5);
+    const timeLimit = 30;
+    const [text, setText] = useState("");
+    const [userText, setUserText] = useState("");
+    const [timeRemaining, setTimeRemaining] = useState(30);
+    const [wpm, setWpm] = useState(0);
+    const [gameStart, setGameStart] = useState(false);
 
-  useEffect(() => {
-    fetch("https://random-word-api.herokuapp.com/word?number=10")
-      .then((res) => res.json())
-      .then((data) => setText(data.join(" ")));
-  }, []);
+    const getHighlightedText = () => {
+        let correctText = "";
+        for (let i = 0; i < text.length; i++) {
+            if (i < userText.length && text[i] === userText[i]) {
+                correctText += `<span class="correct">${text[i]}</span>`;
+            } else {
+                correctText += `<span class="incorrect">${text[i]}</span>`;
+            }
+        }
+        return { __html: correctText };
+    };
 
-  const handleChange = (event) => {
-    setUserText(event.target.value);
-  };
+    const handleChange = (event) => {
+        setUserText(event.target.value);
+    };
 
-  const resetGame = () => {
-    setText("");
-    setUserText("");
-    setTimeRemaining(5);
-  };
+    const resetGame = () => {
+        setText("");
+        setUserText("");
+        setTimeRemaining(timeLimit);
+        setWpm(0);
+    };
 
-  const startGame = () => {
-    setTimeRemaining(5);
-    fetch("https://random-word-api.herokuapp.com/word?number=10")
-      .then((res) => res.json())
-      .then((data) => setText(data.join(" ")));
-  };
+    const startGame = () => {
+        setGameStart(true);
+        setTimeRemaining(timeLimit);
+        setWpm(0);
+        fetch("https://random-word-api.herokuapp.com/word?number=20")
+            .then((res) => res.json())
+            .then((data) => setText(data.join(" ")));
+    };
 
-  const finishGame = () => {
-    setTimeRemaining(0);
-  };
 
-  const tick = () => {
-    setTimeRemaining((time) => {
-      if (time === 1) {
-        finishGame();
-        return 0;
-      } else {
-        return time - 1;
-      }
-    });
-  };
+    useEffect(() => {
+        if (timeRemaining === 0) {
+            const words = userText.split(" ").length;
+            setWpm(words / (timeLimit / 60));
+        }
+    }, [userText, timeRemaining]);
 
-  useEffect(() => {
-    if (timeRemaining > 0) {
-      setTimeout(() => tick(), 1000);
-    }
-  }, [timeRemaining]);
+    useEffect(() => {
+        if (gameStart && timeRemaining > 0) {
+            const intervalId = setInterval(() => {
+                setTimeRemaining(timeRemaining - 1);
+            }, 1000);
+            return () => clearInterval(intervalId);
+        }
+    }, [gameStart, timeRemaining]);
 
-  return (
-    <div className="typing-game">
-      <h1 className="text">{text}</h1>
-      <textarea className="input" value={userText} onChange={handleChange} />
-      <h4 className="timer">Time remaining: {timeRemaining}</h4>
-      <div className="buttons">
-        <button className="start-button" onClick={startGame}>
-          Start
-        </button>
-        <button className="reset-button" onClick={resetGame}>
-          Reset
-        </button>
-      </div>
-    </div>
-  );
+    return (
+        <div className="typing-game">
+            <h1 className="randomText" dangerouslySetInnerHTML={getHighlightedText()} />
+            <textarea className="input" rows={1} value={userText} onChange={handleChange} disabled={timeRemaining === 0} />
+            <h4 className="timer">WPM: {wpm.toFixed(2)} </h4>
+            <h3>  Time remaining: {timeRemaining}</h3>
+            <div className="buttons">
+                <button className="start-button" onClick={startGame}>
+                    Start
+                </button>
+                <button className="reset-button" onClick={resetGame}>
+                    Reset
+                </button>
+            </div>
+        </div>
+    );
 };
 
 export default TypingGame;
