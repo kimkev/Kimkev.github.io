@@ -6,6 +6,7 @@ import Blogs from "./pages/Blogs";
 import Contact from "./pages/Contact";
 import NoPage from "./pages/NoPage";
 import Footer from './components/Footer';
+import TicTacToe from './pages/TicTacToe';
 // import Header from './components/Header';
 
 class App extends React.Component {
@@ -21,6 +22,7 @@ class App extends React.Component {
                 <Route path="Home" element={<Home />} />
                 <Route path="blogs" element={<Blogs />} />
                 <Route path="contact" element={<Contact />} />
+                <Route path="TicTacToe" element={<TicTacToe />} />
                 <Route path="*" element={<NoPage />} />
               </Route>
             </Routes>

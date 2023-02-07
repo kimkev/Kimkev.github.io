@@ -35,6 +35,9 @@ const NavBar = () => {
             <li>
               <Link to="/Contact">Contact</Link>
             </li>
+            <li>
+              <Link to="/TicTacToe">TicTacToe</Link>
+            </li>
           </ul>
         </div>
       </nav>
