@@ -5,9 +5,7 @@ const NavBar = () => {
   return (
     <>
       <nav className='navigation'>
-        <Link to="/Home" className="brand-name">
-          App
-        </Link>
+        <Link to="/Home" className="brand-name">App</Link>
         <button className="hamburger">
           {/* icon from heroicons.com */}
           <svg
