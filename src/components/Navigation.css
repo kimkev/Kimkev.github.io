@@ -5,16 +5,19 @@
   align-items: center;
   position: relative;
   padding: 0.5rem 0rem;
-  background-color: #D3D3D3;
-  color: black;
+  background-color: rgb(39, 42, 44);
+  color: rgb(232, 230, 227);
   box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
 }
 
 .brand-name {
   text-decoration: none;
-  color: black;
   font-size: 1.3rem;
   margin-left: 1rem;
+}
+
+.brand-name:visited, .brand-name:active, .brand-name:hover {
+  color: #e8e6e3;
 }
 
 .navigation-menu {
@@ -33,6 +36,15 @@
   text-decoration: none;
   display: block;
   width: 100%;
+}
+
+.navigation-menu li a:visited {
+  color: #e8e6e3;
+}
+
+navigation-menu li a.active, .navigation-menu li a:hover {
+  color: #e8e6e3;
+  font-weight: bold;
 }
 
 .hamburger {

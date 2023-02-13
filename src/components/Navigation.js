@@ -1,7 +1,7 @@
 import { Outlet, Link } from "react-router-dom";
-import './NavBar.css';
+import './Navigation.css';
 
-const NavBar = () => {
+const Navigation = () => {
   return (
     <>
       <nav className='navigation'>
@@ -48,4 +48,4 @@ const NavBar = () => {
   )
 };
 
-export default NavBar;
+export default Navigation;
