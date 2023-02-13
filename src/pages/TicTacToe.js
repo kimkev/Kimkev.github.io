@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './TicTacToe.css';
 
 const TicTacToe = () => {
     const [board, setBoard] = useState(Array(9).fill(null));
@@ -22,16 +23,7 @@ const TicTacToe = () => {
         return (
             <div
                 key={index}
-                style={{
-                    width: "100px",
-                    height: "100px",
-                    border: "1px solid black",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    fontSize: "50px",
-                    fontWeight: "bold",
-                }}
+                className="square"
                 onClick={() => handleClick(index)}
             >
                 {board[index]}
@@ -40,22 +32,11 @@ const TicTacToe = () => {
     };
 
     return (
-        <div>
-            <div
-                style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(3, 100px)",
-                    gridTemplateRows: "repeat(3, 100px)",
-                    width: "300px",
-                    height: "300px",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    margin: "auto",
-                }}
-            >
+        <div className="board-container">
+            <div className="board">
                 {board.map((square, index) => renderSquare(index))}
             </div>
-            <button onClick={resetBoard} style={{ marginTop: "20px" }}>
+            <button onClick={resetBoard} className="reset-tictactoe">
                 Reset
             </button>
         </div>

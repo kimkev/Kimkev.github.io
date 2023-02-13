@@ -1,0 +1,42 @@
+.board-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    width: 300px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #e8e6e3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.reset-tictactoe {
+    padding: 10px 20px;
+    background-color: lightgray;
+    border: none;
+    border-radius: 5px;
+    transition: transform 0.1s ease-in-out;
+}
+
+.reset-tictactoe:active {
+    transform: scale(0.9);
+}
