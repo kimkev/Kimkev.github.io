@@ -50,9 +50,9 @@
 }
 
 .correct {
-    color: green;
+    color: rgb(97, 255, 97);
 }
 
 .incorrect {
-    color: red;
+    color: rgb(255, 51, 51);
 }
