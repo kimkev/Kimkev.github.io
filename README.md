@@ -1,6 +1,6 @@
 Source code for gh-pages branch
 
-Live demo is curerntly on https://kimkev.github.io/app/
+Live demo is currently on https://kimkev.github.io/app/
 
 
 
