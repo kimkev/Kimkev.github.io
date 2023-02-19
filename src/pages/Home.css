@@ -1,0 +1,31 @@
+.home-container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.col {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #fff;
+    background-color: #444;
+}
+
+.col h2 {
+    color: #fff;
+    text-align: center;
+}
+
+.col p {
+    color: #ddd;
+}
+
+.home-list {
+    margin-top: 20px;
+    list-style-type: "\1F422";
+}
+
+.home-list li {
+    margin: 0.5em 0;
+    padding-left: 10px;
+}
