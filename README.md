@@ -1,5 +1,8 @@
 Source code for gh-pages branch
 
+Live demo is currently on https://kimkev.github.io/app/
+
+
 
 Information for picking this project up:
 1. npm run deploy : This script will deploy the source code to gh-pages branch of the project. 
