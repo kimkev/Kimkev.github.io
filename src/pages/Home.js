@@ -24,17 +24,29 @@ const Home = () => {
         <div className="col">
           <h2>Column 2</h2>
           <ul className="home-list">
-            <li>Section 1</li>
-            <li>Section 2</li>
-            <li>Section 3</li>
+            <li>
+              <Link to="#">tbd</Link>
+            </li>
+            <li>
+              <Link to="#">tbd</Link>
+            </li>
+            <li>
+              <Link to="#">tbd</Link>
+            </li>
           </ul>
         </div>
         <div className="col">
           <h2>Column 3</h2>
           <ul className="home-list">
-            <li>Section 1</li>
-            <li>Section 2</li>
-            <li>Section 3</li>
+            <li>
+              <Link to="#">tbd</Link>
+            </li>
+            <li>
+              <Link to="#">tbd</Link>
+            </li>
+            <li>
+              <Link to="#">tbd</Link>
+            </li>
           </ul>
         </div>
       </div>
