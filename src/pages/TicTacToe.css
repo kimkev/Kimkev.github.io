@@ -29,6 +29,22 @@
     font-weight: bold;
 }
 
+.winningSquare {
+    animation: winning-animation 1s ease-in-out forwards;
+  }
+  
+  @keyframes winning-animation {
+    0% {
+      background-color: transparent;
+    }
+    50% {
+      background-color: #ff6161;
+    }
+    100% {
+      background-color: transparent;
+    }
+  }
+
 .reset-tictactoe {
     padding: 10px 20px;
     background-color: lightgray;
