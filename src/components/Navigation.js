@@ -28,16 +28,10 @@ const Navigation = () => {
               <Link to="/Home">Home</Link>
             </li>
             <li>
-              <Link to="/Blogs">Blogs</Link>
+              <Link to="/Lists">Lists</Link>
             </li>
             <li>
               <Link to="/Contact">Contact</Link>
-            </li>
-            <li>
-              <Link to="/TicTacToe">TicTacToe</Link>
-            </li>
-            <li>
-              <Link to="/TypingGame">TypingGame</Link>
             </li>
           </ul>
         </div>

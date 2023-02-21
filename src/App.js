@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import './App.css';
 import Home from "./pages/Home";
-import Blogs from "./pages/Blogs";
+import Lists from './pages/Lists';
 import Contact from "./pages/Contact";
 import NoPage from "./pages/NoPage";
 import Footer from './components/Footer';
@@ -23,7 +23,7 @@ class App extends React.Component {
                 <Route exact path='/' element={<Home />} />
                 <Route exact path='/app' element={<Home />} />
                 <Route path="home" element={<Home />} />
-                <Route path="blogs" element={<Blogs />} />
+                <Route path="lists" element={<Lists />} />
                 <Route path="contact" element={<Contact />} />
                 <Route path="TicTacToe" element={<TicTacToe />} />
                 <Route path="TypingGame" element={<TypingGame />} />
