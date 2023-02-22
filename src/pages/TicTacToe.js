@@ -50,7 +50,6 @@ const TicTacToe = () => {
             const winningSquares = winnerObject["line"];
             winningSquares.forEach((index) => {
                 const squareElement = document.querySelector(`.square._${index}`);
-                console.log(squareElement);
                 squareElement.classList.add('winning');
             });
         }    
