@@ -81,7 +81,7 @@ const TypingGame = () => {
     }, [isStarted, timeRemaining]);
 
     return (
-        <div className="typing-game">
+        <div className="container">
             <h1 className="randomText" dangerouslySetInnerHTML={getHighlightedText()} />
             <textarea 
                 className="input" 
