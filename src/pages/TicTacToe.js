@@ -89,7 +89,7 @@ const TicTacToe = () => {
     }
 
     return (
-        <div className="board-container">
+        <div className="container">
             <div className="status">{status}</div>
             <div className="board">
                 {board.map((square, index) => renderSquare(index))}

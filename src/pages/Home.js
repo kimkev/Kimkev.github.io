@@ -16,7 +16,7 @@ const Home = () => {
               <Link to="/TypingGame">Typing Game</Link>
             </li>
             <li>
-              Todo: another kind of word game
+              <Link to="/AnagramGame">Anagram</Link>
             </li>
 
           </ul>

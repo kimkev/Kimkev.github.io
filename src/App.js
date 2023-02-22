@@ -1,15 +1,20 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Navigation from "./components/Navigation";
+import BackButton from './components/BackButton';
+
 import './App.css';
+
 import Home from "./pages/Home";
 import Lists from './pages/Lists';
 import Contact from "./pages/Contact";
 import NoPage from "./pages/NoPage";
+
 import Footer from './components/Footer';
 import TicTacToe from './pages/TicTacToe';
 import TypingGame from './pages/TypingGame';
-import BackButton from './components/BackButton';
+import AnagramGame from './pages/AnagramGame';
 
 class App extends React.Component {
   render() {
@@ -29,6 +34,7 @@ class App extends React.Component {
                 <Route path="contact" element={<Contact />} />
                 <Route path="TicTacToe" element={<TicTacToe />} />
                 <Route path="TypingGame" element={<TypingGame />} />
+                <Route path="AnagramGame" element={<AnagramGame />} />
                 <Route path="*" element={<NoPage />} />
               </Routes>
             </BrowserRouter>
