@@ -9,6 +9,7 @@ import NoPage from "./pages/NoPage";
 import Footer from './components/Footer';
 import TicTacToe from './pages/TicTacToe';
 import TypingGame from './pages/TypingGame';
+import BackButton from './components/BackButton';
 
 class App extends React.Component {
   render() {
@@ -18,6 +19,7 @@ class App extends React.Component {
           <div className="content">
             <BrowserRouter>
               <Navigation />
+              <BackButton />
               <Routes>
                 <Route index element={<Home />} />
                 <Route exact path='/' element={<Home />} />
