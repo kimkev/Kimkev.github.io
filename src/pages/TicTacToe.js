@@ -95,7 +95,7 @@ const TicTacToe = () => {
                 {board.map((square, index) => renderSquare(index))}
             </div>
 
-            <button onClick={resetBoard} className="reset-tictactoe">
+            <button onClick={resetBoard}>
                 Reset
             </button>
         </div>
