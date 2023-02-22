@@ -9,7 +9,8 @@ const BackButton = () => {
 
     if (location.pathname === '/' ||
         (location.pathname.toLowerCase()) === '/home' ||
-        (location.pathname.toLowerCase()) === '/app') {
+        (location.pathname.toLowerCase()) === '/app'  ||
+        (location.pathname.toLowerCase()) === '/app/') {
         return null;
     }
 
