@@ -4,6 +4,7 @@ import './TicTacToe.css';
 const TicTacToe = () => {
     const [board, setBoard] = useState(Array(9).fill(null));
     const [currentPlayer, setCurrentPlayer] = useState("X");
+    const [winner, setWinner] = useState(null);
 
 
     const calculateWinner = (board) => {
@@ -26,13 +27,9 @@ const TicTacToe = () => {
         return null;
     };
 
-    const winner = calculateWinner(board);
-    const winningSquares = winner ? [board[winner["line"][0]], board[winner["line"][1]], winner["line"][2]] : [];
-
-    const handleClick = (index) => {
-
+    const handleClick = async (index) => {
         // end if game is over
-        if (winner || board[index] !== null) {
+        if (winner || board[index]) {
             return;
         }
 
@@ -40,15 +37,20 @@ const TicTacToe = () => {
         const newBoard = [...board];
         newBoard[index] = currentPlayer;
         setBoard(newBoard);
-
+        // update winner with newly calculated board
+        setWinner(calculateWinner(newBoard));
         // switch the current player
         setCurrentPlayer(currentPlayer === "X" ? "O" : "X");
 
-        if (winner) {
+        // the await is a hack to allow render square to finish 
+        // before querying the dom element squares
+        const winnerObject = await calculateWinner(newBoard);
+        if (winnerObject) {
             // Animate the winning squares by adding a "winning" class to each square
-            console.log('winner', winningSquares);
-            winningSquares["line"].forEach((square) => {
-                const squareElement = document.getElementById(`winningSquare`);
+            const winningSquares = winnerObject["line"];
+            winningSquares.forEach((index) => {
+                const squareElement = document.querySelector(`.square._${index}`);
+                console.log(squareElement);
                 squareElement.classList.add('winning');
             });
         }    
@@ -58,16 +60,18 @@ const TicTacToe = () => {
         setBoard(Array(9).fill(null));
         const startChar = Math.random() < 0.5 ? "X" : "O";
         setCurrentPlayer(startChar);
+        setWinner(null);
     };
 
     const renderSquare = (index) => {
-        // add classname for winning squares
-        const isWinningSquare = winningSquares.includes(board[index]);
+        // add index for winning squares
+        const winningLine = winner ? [board[winner["line"][0]], board[winner["line"][1]], board[winner["line"][2]]] : [];
+        const isWinningSquare = winningLine.includes(board[index]);
         return (
             <div
                 key={index}
                 type="button"
-                className={`${isWinningSquare ? `square winningSquare` : 'square'}`}
+                className={`${isWinningSquare ? `square _${index}` : 'square'}`}
                 onClick={() => handleClick(index)}
             >
                 {board[index]}
@@ -75,16 +79,15 @@ const TicTacToe = () => {
         );
     };
 
-    const won = calculateWinner(board);
+
     let status;
-    if (won) {
-        status = "Winner: " + won["winner"];
+    if (winner) {
+        status = "Winner: " + winner["winner"];
     } else if (board.every((square) => square !== null)) {
         status = "It's a tie!";
     } else {
         status = "Next player: " + (currentPlayer ? "X" : "O");
     }
-
 
     return (
         <div className="board-container">

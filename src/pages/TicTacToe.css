@@ -29,7 +29,7 @@
     font-weight: bold;
 }
 
-.winningSquare {
+.winning {
     animation: winning-animation 1s ease-in-out forwards;
   }
   
