@@ -5,7 +5,7 @@ const Navigation = () => {
   return (
     <>
       <nav className='navigation'>
-        <Link to="/Home" className="brand-name">App</Link>
+        <Link to="/app" className="brand-name">App</Link>
         <button className="hamburger">
           {/* icon from heroicons.com */}
           <svg
@@ -25,7 +25,7 @@ const Navigation = () => {
           className="navigation-menu">
           <ul>
             <li>
-              <Link to="/Home">Home</Link>
+              <Link to="/app">Home</Link>
             </li>
             <li>
               <Link to="/Lists">Lists</Link>
