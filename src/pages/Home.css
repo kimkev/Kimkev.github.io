@@ -22,7 +22,18 @@
 
 .home-list {
     margin-top: 20px;
+}
+
+.col-A {
     list-style-type: "\1F422";
+}
+
+.col-B {
+    list-style-type: "\1F99D";
+}
+
+.col-C {
+    list-style-type: "\1F994";
 }
 
 .home-list li {
