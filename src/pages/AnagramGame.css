@@ -1,18 +1,26 @@
-.form-anagram {
+.scrambled-word {
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: lowercase;
+    margin-top: 0px;
+    height: 10vh;
+    line-height: 10vh;
+    letter-spacing: 5px;
+  }
+
+.anagram-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.form-anagram input {
+.anagram-container input {
     width: 40%;
     font-size: 2rem;
+    text-align: center;
+    text-transform: lowercase;
 }
 
-.form-button-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
-    width: 100%;
-    gap: 10%;
+.playAgain-button, .hint-button {
+    margin-top: 20px;
 }

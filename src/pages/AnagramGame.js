@@ -4,7 +4,7 @@ import './AnagramGame.css';
 function AnagramGame() {
     const [word, setWord] = useState("");
     const [scrambledWord, setScrambledWord] = useState("");
-    const [input, setInput] = useState("");
+    const [guess, setGuess] = useState("");
     const [message, setMessage] = useState("");
     const [difficulty, setDifficulty] = useState('easy');
 
@@ -19,14 +19,15 @@ function AnagramGame() {
             `https://random-word-api.herokuapp.com/word?length=${wordLength}`);
         const data = await response.json();
         setWord(data[0]);
-        setScrambledWord(scrambleWord(data[0]));
-        setInput("");
+        console.log(data[0])
+        let scrambledWord = data[0];
+        while (scrambledWord === data[0]) {
+            scrambledWord = scrambleWord(data[0])
+        }
+        setScrambledWord(scrambledWord);
         setMessage("");
+        setGuess("");
     }, [difficulty]);
-
-    useEffect(() => {
-        fetchWord();
-    }, [fetchWord]);
 
     const scrambleWord = word => {
         // Scramble the word
@@ -37,7 +38,7 @@ function AnagramGame() {
     };
 
     const handleInputChange = (event) => {
-        setInput(event.target.value);
+        setGuess(event.target.value);
     };
 
     const showMessage = (text) => {
@@ -47,25 +48,31 @@ function AnagramGame() {
         }, 3000);
     };
 
-    const handleFormSubmit = (event) => {
-        console.log('button pressed');
-        event.preventDefault();
-        if (input.toLowerCase() === word.toLowerCase()) {
-            showMessage("You won!");
-        } else {
-            showMessage("Try again.");
-        }
-    };
-
-    const handlePlayAgain = () => {
-        setMessage("");
-        setInput("");
-        fetchWord();
-    };
-
     const handleDifficulty = (event) => {
         setDifficulty(event.target.value);
     }
+
+    const handleHint = () => {
+        let newGuess = guess;
+        if (newGuess.length < word.length) {
+            newGuess += word[newGuess.length];
+            setGuess(newGuess);
+        }
+    };
+
+    useEffect(() => {
+        fetchWord();
+    }, [fetchWord]);
+
+    useEffect(() => {
+        if (guess.length === scrambledWord.length) {
+            if (guess.toLowerCase() === word.toLowerCase()) {
+                showMessage("Correct");
+            } else {
+                showMessage("Incorrect. Try again.");
+            }
+        }
+    }, [guess, scrambledWord.length, word]);
 
     return (
         <div className="container">
@@ -76,21 +83,18 @@ function AnagramGame() {
                 <button type="button" value="hard" onClick={handleDifficulty}>Hard</button>
             </div>
             <p>Unscramble the word below:</p>
-            <h2>{scrambledWord}</h2>
-            <form className="form-anagram" onSubmit={handleFormSubmit}>
+            <p className="scrambled-word">{scrambledWord}</p>
+            <div className="anagram-container">
                 <input
                     className="input"
                     type="text"
-                    value={input}
+                    value={guess}
                     onChange={handleInputChange}
                     placeholder="Guess Here"
                 />
-                <div className="form-button-container">
-                    <button type="submit">Guess</button>
-                    <button onClick={handlePlayAgain}>Play again</button>
-                </div>
-
-            </form>
+                <button className="hint-button" onClick={handleHint}>Hint</button>
+                <button className="playAgain-button" onClick={fetchWord}>Play again</button>
+            </div>
             <h2>{message}</h2>
         </div>
     );
