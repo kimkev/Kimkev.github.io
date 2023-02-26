@@ -15,6 +15,11 @@ import Footer from './components/Footer';
 import TicTacToe from './pages/TicTacToe';
 import TypingGame from './pages/TypingGame';
 import AnagramGame from './pages/AnagramGame';
+import Admin from './pages/Admin';
+
+import ReactGA from 'react-ga4';
+
+ReactGA.initialize(`${process.env.REACT_APP_GOOGLE_TRACKING_ID}`);
 
 class App extends React.Component {
   render() {
@@ -36,6 +41,10 @@ class App extends React.Component {
                 <Route path="TypingGame" element={<TypingGame />} />
                 <Route path="AnagramGame" element={<AnagramGame />} />
                 <Route path="*" element={<NoPage />} />
+
+
+                {/* should be hidden or password protected */}
+                <Route path="admin" element={<Admin />} />
               </Routes>
             </BrowserRouter>
           </div>
