@@ -20,6 +20,12 @@
   color: #e8e6e3;
 }
 
+/* edit so it is password protected instead */
+.Admin {
+  opacity: 0;
+}
+
+
 .navigation-menu {
   margin-left: auto;
 }
@@ -38,14 +44,14 @@
   color: #e8e6e3;
 }
 
-.navigation-menu li a:visited {
+.navigation-menu li a:visited, .navigation-menu li a:active {
   color: #e8e6e3;
 }
 
-navigation-menu li a.active, .navigation-menu li a:hover {
-  color: #e8e6e3;
-  font-weight: bold;
+.navigation-menu li a:hover {
+  color: rgb(130, 0, 150);
 }
+
 
 .hamburger {
   /* removes default border on button element */
