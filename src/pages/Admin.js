@@ -5,28 +5,14 @@ import ReactGA from 'react-ga4';
 
 const Admin = (props) => {
 
-    const [uniqueVisitors, setUniqueVisitors] = useState(null);
+    const [uniqueVisitors, setUniqueVisitors] = useState(0);
 
     useEffect(() => {
-        ReactGA.initialize(`${process.env.REACT_APP_GOOGLE_TRACKING_ID}`);
+        // ReactGA.initialize(process.env.REACT_APP_GOOGLE_TRACKING_ID);
         ReactGA.send({ hitType: "pageview", page: window.location.pathname });
-
-
-        ReactGA.ga('set', 'dimension1', 'uniqueVisitor');
-        ReactGA.ga((tracker) => {
-            const clientId = tracker.get('clientId');
-            ReactGA.set({ clientId });
-        });
+        console.log(window.location.pathname);
+        setUniqueVisitors(prevCount => prevCount + 1);
     }, []);
-
-    useEffect(() => {
-        ReactGA.ga('send', 'pageview');
-        ReactGA.ga((tracker) => {
-            const visitorCount = tracker.get('metric1');
-            setUniqueVisitors(visitorCount);
-        });
-    }, []);
-
 
 
     return (
