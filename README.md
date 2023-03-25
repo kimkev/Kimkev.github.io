@@ -9,6 +9,8 @@ Information for picking this project up:
    It will be hosted on the package.json's homepage link (double check routerlinks work before creating live link)
 2. This project is hosted on the same host as github pages (i.e. kimkev.github.io) so everything created here is an extension to that unless the repository is renamed
 
+Integrated with https://github.com/gitname/react-gh-pages
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
