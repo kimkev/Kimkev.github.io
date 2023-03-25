@@ -1,3 +1,0 @@
-WIP - Tracking website visit 
-- password protected analytics
-- sound based game
