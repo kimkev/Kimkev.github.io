@@ -23,10 +23,7 @@ import ReactGA from 'react-ga4';
 ReactGA.initialize(process.env.REACT_APP_GOOGLE_TRACKING_ID);
 const browserHistory = createBrowserHistory()
 browserHistory.listen(location => {
-  // ReactGA.set({ page: location.pathname });
-  // ReactGA.send(location.pathname);
-  ReactGA.send({ hitType: "pageview", page: window.location.pathname });
-  console.log(location.pathname)
+  ReactGA.send({ hitType: "pageview", page: location.location.pathname });
 });
 
 const App = () => {
