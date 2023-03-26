@@ -5,17 +5,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ReactGA from 'react-ga4';
 import { createBrowserHistory } from 'history';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { initGA, trackPageview } from './components/Analytics';
 
+const measurementId = process.env.REACT_APP_GOOGLE_TRACKING_ID;
+initGA(measurementId);
 
-
-try {
-  setTimeout(_ => {
-    ReactGA.initialize(process.env.REACT_APP_GOOGLE_TRACKING_ID)
-    console.log('ga4 initialized');
-  }, 1000);
-} catch (err) {
-      console.error(err);
-}
 
 
 const browserHistory = createBrowserHistory()
@@ -25,9 +20,15 @@ browserHistory.listen(location => {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <>
-    <App />
-  </>
+  <React.StrictMode>
+    <Router
+      onUpdate={() => {
+        trackPageview();
+      }}
+    >
+      <App />
+    </Router>
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
