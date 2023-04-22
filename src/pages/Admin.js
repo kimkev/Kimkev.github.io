@@ -8,7 +8,7 @@ const Admin = (props) => {
     const [uniqueVisitors, setUniqueVisitors] = useState(0);
 
     useEffect(() => {
-        // ReactGA.initialize(process.env.REACT_APP_GOOGLE_TRACKING_ID);
+        ReactGA.initialize(process.env.REACT_APP_GOOGLE_TRACKING_ID);
         ReactGA.send({ hitType: "pageview", page: window.location.pathname });
         console.log(window.location.pathname);
         setUniqueVisitors(prevCount => prevCount + 1);
