@@ -7,7 +7,7 @@ const Home = () => {
     <>
       <div className="home-container">
         <div className="col">
-          <h2>Minigames</h2>
+          <h2>Mini games</h2>
           <ul className="home-list col-A">
             <li>
               <Link to="/TicTacToe">TicTacToe</Link>

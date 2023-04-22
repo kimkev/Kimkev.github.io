@@ -11,8 +11,6 @@ import { initGA, trackPageview } from './components/Analytics';
 const measurementId = process.env.REACT_APP_GOOGLE_TRACKING_ID;
 initGA(measurementId);
 
-
-
 const browserHistory = createBrowserHistory()
 browserHistory.listen(location => {
   ReactGA.send({ hitType: "pageview", page: location.location.pathname });

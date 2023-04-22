@@ -1,4 +1,5 @@
 .home-container {
+    padding: 3%;
     display: flex;
     flex-direction: row;
     height: 100vh;
@@ -6,8 +7,8 @@
 
 .col {
     flex: 1;
-    padding: 20px;
-    border: 1px solid #fff;
+    padding: 30px;
+    border: 1px dotted #fff;
     background-color: #444;
 }
 

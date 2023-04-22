@@ -4,6 +4,16 @@ footer {
   text-align: center;
 }
 
+#paypal a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#paypal a:hover {
+  color: rgb(130, 0, 150);
+  text-decoration: underline;
+}
+
 @media (max-width: 767px) {
   footer {
     padding: 10px;
