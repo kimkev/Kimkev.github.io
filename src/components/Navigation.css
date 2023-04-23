@@ -14,10 +14,15 @@
   text-decoration: none;
   font-size: 1.3rem;
   margin-left: 1rem;
+  color: #e8e6e3;
 }
 
-.brand-name:visited, .brand-name:active, .brand-name:hover {
+.brand-name:visited, .brand-name:active {
   color: #e8e6e3;
+}
+
+.brand-name:hover {
+  color: rgb(130, 0, 150);
 }
 
 /* edit so it is password protected instead */
