@@ -1,0 +1,13 @@
+h2 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    width: 100%;
+    color: #e8e6e3;
+}
+
+a:hover {
+    color: rgb(130, 0, 150);
+}
