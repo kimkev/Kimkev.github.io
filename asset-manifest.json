@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/kimkev.github.io/static/css/main.549b79a4.css",
-    "main.js": "/kimkev.github.io/static/js/main.a37c2856.js",
-    "static/js/787.82224b29.chunk.js": "/kimkev.github.io/static/js/787.82224b29.chunk.js",
-    "index.html": "/kimkev.github.io/index.html",
-    "main.549b79a4.css.map": "/kimkev.github.io/static/css/main.549b79a4.css.map",
-    "main.a37c2856.js.map": "/kimkev.github.io/static/js/main.a37c2856.js.map",
-    "787.82224b29.chunk.js.map": "/kimkev.github.io/static/js/787.82224b29.chunk.js.map"
+    "main.css": "/static/css/main.549b79a4.css",
+    "main.js": "/static/js/main.9c8f52b1.js",
+    "static/js/787.82224b29.chunk.js": "/static/js/787.82224b29.chunk.js",
+    "index.html": "/index.html",
+    "main.549b79a4.css.map": "/static/css/main.549b79a4.css.map",
+    "main.9c8f52b1.js.map": "/static/js/main.9c8f52b1.js.map",
+    "787.82224b29.chunk.js.map": "/static/js/787.82224b29.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.549b79a4.css",
-    "static/js/main.a37c2856.js"
+    "static/js/main.9c8f52b1.js"
   ]
 }
