@@ -16,6 +16,7 @@ import TicTacToe from './pages/TicTacToe';
 import TypingGame from './pages/TypingGame';
 import AnagramGame from './pages/AnagramGame';
 import Admin from './pages/Admin';
+import Home2 from './pages/home2';
 
 const App = () => {
 
@@ -32,10 +33,10 @@ const App = () => {
           <Navigation />
           <BackButton />
           <Routes>
-            <Route index element={<Home />} />
-            <Route exact path='/' element={<Home />} />
-            <Route exact path='/app' element={<Home />} />
-            <Route path="home" element={<Home />} />
+            <Route index element={<Home2 />} />
+            <Route exact path='/' element={<Home2 />} />
+            <Route exact path='/app' element={<Home />} /> 
+            <Route path="home" element={<Home2 />} />
             <Route path="lists" element={<Lists />} />
             <Route path="contact" element={<Contact />} />
             <Route path="TicTacToe" element={<TicTacToe />} />
