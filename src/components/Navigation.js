@@ -1,17 +1,21 @@
 import React, { useState } from 'react';
 import './Navigation.css';
+import resume from '../public/Kevin_Kim_Resume.pdf';
 
 const NavigationBar = () => {
 
   const [dropdownVisible, setDropdownVisible] = useState(false);
+  const [isMouseHovering, setIsMouseHovering] = useState(false);
 
   const handleMouseEnter = () => {
     setDropdownVisible(true);
+    setIsMouseHovering(true);
   };
 
   const handleMouseLeave = () => {
+    setIsMouseHovering(false);
     setTimeout(() => {
-      if (!dropdownVisible) {
+      if (!isMouseHovering) {
         setDropdownVisible(false);
       }
     }, 1000);
@@ -29,7 +33,7 @@ const NavigationBar = () => {
         <div className="navbar-socials-group">
           Socials
         </div>
-        {dropdownVisible && 
+        {dropdownVisible &&
           <div
             id="dropdown-list"
             className="navbar-socials-dropdown"
@@ -39,7 +43,7 @@ const NavigationBar = () => {
             <ul>
               <li><a href="https://github.com/kimkev">Github</a></li>
               <li><a href="https://www.linkedin.com/in/kimkevi/">LinkedIn</a></li>
-              <li><a href="../../public/files/Kevin_Kim_Resume.pdf">Resume</a></li>
+              <li><a href={resume} target="_blank" rel="noreferrer">Resume</a></li>
             </ul>
           </div>
         }
