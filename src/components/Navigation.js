@@ -1,48 +1,33 @@
+import React, { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 import './Navigation.css';
 
-const Navigation = () => {
-  return (
-    <>
-      <nav className='navigation'>
-        <Link to="/" className="brand-name">App</Link>
-        <button className="hamburger">
-          {/* icon from heroicons.com */}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5"
-            viewBox="0 0 20 20"
-            fill="white"
-          >
-            <path
-              fillRule="evenodd"
-              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </button>
-        <div
-          className="navigation-menu">
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/Lists">Lists</Link>
-            </li>
-            <li>
-              <Link to="/Contact">Contact</Link>
-            </li>
-            <li className="Admin">
-              <Link to="/admin">admin</Link>
-            </li>
-          </ul>
-        </div>
-      </nav>
+const Navbar = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
 
-      <Outlet />
-    </>
-  )
+  const toggleMenu = () => {
+    setIsExpanded(!isExpanded);
+  };
+
+  return (
+    <nav>
+      <div className="navbar-container">
+        <h1 className="navbar-title"><Link to="/">My Website</Link></h1>
+        <button className="navbar-toggle" onClick={toggleMenu}>
+          <span className="navbar-toggle-icon"></span>
+        </button>
+        <ul className={`navbar-links ${isExpanded ? "expanded" : ""}`}>
+          <li className="navbar-link-item"><Link to="/apps">Apps</Link></li>
+          <li className="navbar-link-item"><a href="https://twitter.com/">Twitter</a></li>
+          <li className="navbar-link-item"><a href="https://www.facebook.com/">Facebook</a></li>
+          <li className="navbar-link-item"><a href="https://www.instagram.com/">Instagram</a></li>
+        </ul>
+
+      </div>
+    </nav>
+  );
 };
 
-export default Navigation;
+export default Navbar;
+
+
