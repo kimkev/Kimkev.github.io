@@ -1,33 +1,61 @@
-import React, { useState } from "react";
-import { Outlet, Link } from "react-router-dom";
+import React, { useState } from 'react';
 import './Navigation.css';
 
-const Navbar = () => {
-  const [isExpanded, setIsExpanded] = useState(false);
+const NavigationBar = () => {
 
-  const toggleMenu = () => {
-    setIsExpanded(!isExpanded);
+  const [dropdownVisible, setDropdownVisible] = useState(false);
+
+  const handleMouseEnter = () => {
+    setDropdownVisible(true);
+  };
+
+  const handleMouseLeave = () => {
+    // Check whether the user is currently hovering over the socials dropdown
+    setTimeout(() => {
+      if (!dropdownVisible) {
+        setDropdownVisible(false);
+      }
+    }, 1000);
+  };
+
+  const handleDropdownMouseEnter = () => {
+    setDropdownVisible(true);
+  };
+
+  const handleDropdownMouseLeave = () => {
+    setTimeout(() => {
+      if (!dropdownVisible) {
+        setDropdownVisible(false);
+      }
+    }, 2000);
   };
 
   return (
-    <nav>
-      <div className="navbar-container">
-        <h1 className="navbar-title"><Link to="/">My Website</Link></h1>
-        <button className="navbar-toggle" onClick={toggleMenu}>
-          <span className="navbar-toggle-icon"></span>
-        </button>
-        <ul className={`navbar-links ${isExpanded ? "expanded" : ""}`}>
-          <li className="navbar-link-item"><Link to="/apps">Apps</Link></li>
-          <li className="navbar-link-item"><a href="https://twitter.com/">Twitter</a></li>
-          <li className="navbar-link-item"><a href="https://www.facebook.com/">Facebook</a></li>
-          <li className="navbar-link-item"><a href="https://www.instagram.com/">Instagram</a></li>
-        </ul>
-
+    <nav className="navbar">
+      <div className="navbar-title">Kevin Kim</div>
+      <div
+        className="navbar-socials"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <button className="navbar-socials-button">Socials</button>
+        {dropdownVisible && (
+          <div
+            className="navbar-socials-dropdown"
+            onMouseEnter={handleDropdownMouseEnter}
+            onMouseLeave={handleDropdownMouseLeave}
+          >
+            <ul
+            >
+              <li>Facebook</li>
+              <li>Twitter</li>
+              <li>Instagram</li>
+            </ul>
+          </div>
+        )}
       </div>
     </nav>
   );
 };
 
-export default Navbar;
-
-
+export default NavigationBar;
