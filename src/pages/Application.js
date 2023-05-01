@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 
-const Home2 = () => {
+const Application = () => {
   return (
     <>
       <div className="home-container">
@@ -54,4 +54,4 @@ const Home2 = () => {
   )
 };
 
-export default Home2;
+export default Application;

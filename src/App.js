@@ -8,15 +8,16 @@ import { trackPageview } from './components/Analytics';
 import './App.css';
 
 import Home from "./pages/Home";
+import Application from './pages/Application';
+import Footer from './components/Footer';
 import Lists from './pages/Lists';
 import Contact from "./pages/Contact";
 import NoPage from "./pages/NoPage";
-import Footer from './components/Footer';
-import TicTacToe from './pages/TicTacToe';
-import TypingGame from './pages/TypingGame';
-import AnagramGame from './pages/AnagramGame';
+import TicTacToe from './pages/games/TicTacToe';
+import TypingGame from './pages/games/TypingGame';
+import AnagramGame from './pages/games/AnagramGame';
 import Admin from './pages/Admin';
-import Home2 from './pages/home2';
+
 
 const App = () => {
 
@@ -33,10 +34,10 @@ const App = () => {
           <Navigation />
           <BackButton />
           <Routes>
-            <Route index element={<Home2 />} />
-            <Route exact path='/' element={<Home2 />} />
-            <Route exact path='/app' element={<Home />} /> 
-            <Route path="home" element={<Home2 />} />
+            <Route index element={<Home />} />
+            <Route exact path='/' element={<Home />} />
+            <Route path='application' element={<Application />} /> 
+            <Route path="home" element={<Home />} />
             <Route path="lists" element={<Lists />} />
             <Route path="contact" element={<Contact />} />
             <Route path="TicTacToe" element={<TicTacToe />} />
