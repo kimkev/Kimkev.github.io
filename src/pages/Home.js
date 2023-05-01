@@ -6,7 +6,20 @@ const Home = () => {
   return (
     <>
       <div className="home-container">
-        <Link to="/application">React Apps</Link>
+        <div className="profile">
+          <div className="Intro">
+            <h1>Welcome</h1>
+            <p>
+              My name is Kevin Kim, I am Web Developer based in Ontario, Canada.
+            </p>
+          </div>
+
+          <div className="Projects">
+            <h1>Projects</h1>
+            <Link to="/application">React Apps</Link>
+          </div>
+        </div>
+
       </div>
     </>
   )
