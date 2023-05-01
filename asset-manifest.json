@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "https://kimkev.github.io/static/css/main.549b79a4.css",
-    "main.js": "https://kimkev.github.io/static/js/main.6bb1ba97.js",
+    "main.css": "https://kimkev.github.io/static/css/main.d9277ede.css",
+    "main.js": "https://kimkev.github.io/static/js/main.607e924c.js",
     "static/js/787.82224b29.chunk.js": "https://kimkev.github.io/static/js/787.82224b29.chunk.js",
     "index.html": "https://kimkev.github.io/index.html",
-    "main.549b79a4.css.map": "https://kimkev.github.io/static/css/main.549b79a4.css.map",
-    "main.6bb1ba97.js.map": "https://kimkev.github.io/static/js/main.6bb1ba97.js.map",
+    "main.d9277ede.css.map": "https://kimkev.github.io/static/css/main.d9277ede.css.map",
+    "main.607e924c.js.map": "https://kimkev.github.io/static/js/main.607e924c.js.map",
     "787.82224b29.chunk.js.map": "https://kimkev.github.io/static/js/787.82224b29.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.549b79a4.css",
-    "static/js/main.6bb1ba97.js"
+    "static/css/main.d9277ede.css",
+    "static/js/main.607e924c.js"
   ]
 }
