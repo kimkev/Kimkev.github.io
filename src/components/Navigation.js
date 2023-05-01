@@ -10,7 +10,6 @@ const NavigationBar = () => {
   };
 
   const handleMouseLeave = () => {
-    // Check whether the user is currently hovering over the socials dropdown
     setTimeout(() => {
       if (!dropdownVisible) {
         setDropdownVisible(false);
@@ -18,17 +17,6 @@ const NavigationBar = () => {
     }, 1000);
   };
 
-  const handleDropdownMouseEnter = () => {
-    setDropdownVisible(true);
-  };
-
-  const handleDropdownMouseLeave = () => {
-    setTimeout(() => {
-      if (!dropdownVisible) {
-        setDropdownVisible(false);
-      }
-    }, 2000);
-  };
 
   return (
     <nav className="navbar">
@@ -38,21 +26,23 @@ const NavigationBar = () => {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <button className="navbar-socials-button">Socials</button>
-        {dropdownVisible && (
+        <div className="navbar-socials-group">
+          Socials
+        </div>
+        {dropdownVisible && 
           <div
+            id="dropdown-list"
             className="navbar-socials-dropdown"
-            onMouseEnter={handleDropdownMouseEnter}
-            onMouseLeave={handleDropdownMouseLeave}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
-            <ul
-            >
-              <li>Facebook</li>
-              <li>Twitter</li>
-              <li>Instagram</li>
+            <ul>
+              <li><a href="https://github.com/kimkev">Github</a></li>
+              <li><a href="https://www.linkedin.com/in/kimkevi/">LinkedIn</a></li>
+              <li><a href="../../public/files/Kevin_Kim_Resume.pdf">Resume</a></li>
             </ul>
           </div>
-        )}
+        }
       </div>
     </nav>
   );
