@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Navigation.css';
 import resume from '../public/Kevin_Kim_Resume.pdf';
 
@@ -14,12 +14,21 @@ const NavigationBar = () => {
 
   const handleMouseLeave = () => {
     setIsMouseHovering(false);
-    setTimeout(() => {
-      if (!isMouseHovering) {
-        setDropdownVisible(false);
-      }
-    }, 1000);
   };
+
+  useEffect(() => {
+    let timeoutId;
+
+    if (!isMouseHovering) {
+      timeoutId = setTimeout(() => {
+        setDropdownVisible(false);
+      }, 1000);
+    }
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [isMouseHovering]);
 
 
   return (
@@ -37,8 +46,6 @@ const NavigationBar = () => {
           <div
             id="dropdown-list"
             className="navbar-socials-dropdown"
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
           >
             <ul>
               <li><a href="https://github.com/kimkev">Github</a></li>
