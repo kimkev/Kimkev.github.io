@@ -22,6 +22,7 @@ import Admin from './pages/Admin';
 const App = () => {
 
   const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     trackPageview();
@@ -50,7 +51,7 @@ const App = () => {
             <Route path="admin" element={<Admin />} />
           </Routes>
         </div>
-        <Footer note="Footer" />
+        <Footer isHomePage={isHomePage} />
       </div>
     </>
 
