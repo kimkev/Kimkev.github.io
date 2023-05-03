@@ -1,48 +1,62 @@
-import { Outlet, Link } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
 import './Navigation.css';
+import resume from '../public/Kevin_Kim_Resume.pdf';
 
-const Navigation = () => {
+const NavigationBar = () => {
+
+  const [dropdownVisible, setDropdownVisible] = useState(false);
+  const [isMouseHovering, setIsMouseHovering] = useState(false);
+
+  const handleMouseEnter = () => {
+    setDropdownVisible(true);
+    setIsMouseHovering(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsMouseHovering(false);
+  };
+
+  useEffect(() => {
+    let timeoutId;
+
+    if (!isMouseHovering) {
+      timeoutId = setTimeout(() => {
+        setDropdownVisible(false);
+      }, 1000);
+    }
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [isMouseHovering]);
+
+
   return (
-    <>
-      <nav className='navigation'>
-        <Link to="/" className="brand-name">App</Link>
-        <button className="hamburger">
-          {/* icon from heroicons.com */}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5"
-            viewBox="0 0 20 20"
-            fill="white"
-          >
-            <path
-              fillRule="evenodd"
-              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </button>
-        <div
-          className="navigation-menu">
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/Lists">Lists</Link>
-            </li>
-            <li>
-              <Link to="/Contact">Contact</Link>
-            </li>
-            <li className="Admin">
-              <Link to="/admin">admin</Link>
-            </li>
-          </ul>
+    <nav className="navbar">
+      <div className="navbar-title">Kevin Kim</div>
+      <div
+        className="navbar-socials"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <div className="navbar-socials-group">
+          Socials
         </div>
-      </nav>
-
-      <Outlet />
-    </>
-  )
+        {dropdownVisible &&
+          <div
+            id="dropdown-list"
+            className="navbar-socials-dropdown"
+          >
+            <ul>
+              <li><a href="https://github.com/kimkev">Github</a></li>
+              <li><a href="https://www.linkedin.com/in/kimkevi/">LinkedIn</a></li>
+              <li><a href={resume} target="_blank" rel="noreferrer">Resume</a></li>
+            </ul>
+          </div>
+        }
+      </div>
+    </nav>
+  );
 };
 
-export default Navigation;
+export default NavigationBar;
