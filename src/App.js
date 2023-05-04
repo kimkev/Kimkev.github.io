@@ -11,7 +11,6 @@ import Home from "./pages/Home";
 import Application from './pages/Application';
 import Footer from './components/Footer';
 import Lists from './pages/Lists';
-import Contact from "./pages/Contact";
 import NoPage from "./pages/NoPage";
 import TicTacToe from './pages/games/TicTacToe';
 import TypingGame from './pages/games/TypingGame';
@@ -40,7 +39,6 @@ const App = () => {
             <Route path='application' element={<Application />} /> 
             <Route path="home" element={<Home />} />
             <Route path="lists" element={<Lists />} />
-            <Route path="contact" element={<Contact />} />
             <Route path="TicTacToe" element={<TicTacToe />} />
             <Route path="TypingGame" element={<TypingGame />} />
             <Route path="AnagramGame" element={<AnagramGame />} />

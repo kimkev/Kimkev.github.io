@@ -5,7 +5,7 @@ import "./Application.css";
 const Application = () => {
   return (
     <>
-      <div className="home-container">
+      <div className="container">
         <div className="col">
           <h2>Mini games</h2>
           <ul className="home-list col-A">
