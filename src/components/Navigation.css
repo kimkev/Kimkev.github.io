@@ -1,6 +1,12 @@
+:root {
+  --navigation-height: 150px;
+}
+
 .navbar {
+  box-sizing: border-box;
+  padding: 30px 15px;
+  height: var(--navigation-height);
   display: flex;
-  padding: 30px;
   justify-content: space-between;
   align-items: center;
 }

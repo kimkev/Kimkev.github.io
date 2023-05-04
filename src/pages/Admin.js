@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./Home.css";
+import "./Application.css";
 import ReactGA from 'react-ga4';
 
 
@@ -17,7 +17,7 @@ const Admin = (props) => {
 
     return (
         <>
-            <div className="home-container">
+            <div className="container">
                 <div className="col">
                     <h2>Analytics</h2>
                     <ul className="home-list col-A">
