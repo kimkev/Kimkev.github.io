@@ -14,6 +14,68 @@
 .navbar-title {
   font-weight: bold;
   font-size: 30px;
+  text-transform: uppercase;
+}
+
+.navbar-title span {
+  animation: draw-letters 2s ease forwards;
+  animation-delay: calc(0.1s * var(--index));
+}
+
+/* Title animation */
+@keyframes draw-letters {
+  from {
+    opacity: 0;
+    stroke-dashoffset: 25px;
+    stroke-dasharray: 25px;
+    text-fill-color: transparent;
+    -webkit-text-stroke: 2px #005c15;
+   
+  }
+  to {
+    opacity: 1;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 25px;
+    text-fill-color: #ffffff;
+    -webkit-text-stroke: 2px #005c15;
+  
+  }
+}
+
+.navbar-title span:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.navbar-title span:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.navbar-title span:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.navbar-title span:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.navbar-title span:nth-child(5) {
+  animation-delay: 1.0s;
+}
+
+.navbar-title span:nth-child(6) {
+  animation-delay: 1.1s;
+}
+
+.navbar-title span:nth-child(7) {
+  animation-delay: 1.2s;
+}
+
+.navbar-title span:nth-child(8) {
+  animation-delay: 1.4s;
+}
+
+.navbar-title span:nth-child(9) {
+  animation-delay: 1.6s;
 }
 
 .navbar-socials {

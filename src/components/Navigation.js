@@ -33,7 +33,17 @@ const NavigationBar = () => {
 
   return (
     <nav className="navbar">
-      <div className="navbar-title">Kevin Kim</div>
+      <div className="navbar-title">
+        <span>k</span>
+        <span>e</span>
+        <span>v</span>
+        <span>i</span>
+        <span>n</span>
+        <span> </span>
+        <span>k</span>
+        <span>i</span>
+        <span>m</span>        
+      </div>
       <div
         className="navbar-socials"
         onMouseEnter={handleMouseEnter}
