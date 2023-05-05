@@ -4,7 +4,7 @@
 
 .navbar {
   box-sizing: border-box;
-  padding: 30px 15px;
+  padding: 5%;
   height: var(--navigation-height);
   display: flex;
   justify-content: space-between;
