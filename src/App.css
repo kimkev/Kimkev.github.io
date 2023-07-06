@@ -58,3 +58,13 @@ button:active {
     overflow: hidden;
     white-space: nowrap;
 }
+
+a:link,
+a:visited {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+a:hover {
+    color: rgb(130, 0, 150);
+}

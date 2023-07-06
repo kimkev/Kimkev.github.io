@@ -10,16 +10,6 @@ footer {
   text-align: center;
 }
 
-#paypal a {
-  color: inherit;
-  text-decoration: none;
-}
-
-#paypal a:hover {
-  color: rgb(130, 0, 150);
-  text-decoration: underline;
-}
-
 .Admin {
   opacity: 0;
 }
