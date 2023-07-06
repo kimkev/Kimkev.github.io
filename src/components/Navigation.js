@@ -4,8 +4,13 @@ import resume from '../public/Kevin_Kim_Resume.pdf';
 
 const NavigationBar = () => {
 
+  const name = 'Kevin Kim';
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [isMouseHovering, setIsMouseHovering] = useState(false);
+
+  const title = name.split('').map((char, index) => {
+    return <span key={index}>{char}</span>
+  })
 
   const handleMouseEnter = () => {
     setDropdownVisible(true);
@@ -34,15 +39,7 @@ const NavigationBar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-title">
-        <span>k</span>
-        <span>e</span>
-        <span>v</span>
-        <span>i</span>
-        <span>n</span>
-        <span> </span>
-        <span>k</span>
-        <span>i</span>
-        <span>m</span>        
+        {title}
       </div>
       <div
         className="navbar-socials"
