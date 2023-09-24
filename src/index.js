@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ReactGA from 'react-ga4';
 import { createBrowserHistory } from 'history';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import { initGA, trackPageview } from './components/Analytics';
 
 const measurementId = process.env.REACT_APP_GOOGLE_TRACKING_ID;
@@ -19,13 +19,13 @@ browserHistory.listen(location => {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router
+    <HashRouter
       onUpdate={() => {
         trackPageview();
       }}
     >
       <App />
-    </Router>
+    </HashRouter>
   </React.StrictMode>
 );
 
