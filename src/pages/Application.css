@@ -3,7 +3,7 @@
     width: 70%;
     display: flex;
     flex-direction: row;
-    height: 100vh;
+    height: calc(100vh - var(--footer-height) - var(--navigation-height));
     justify-content: center;
     margin: 0 auto;
 }
