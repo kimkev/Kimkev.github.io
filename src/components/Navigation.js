@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Navigation.css';
 import resume from '../public/Kevin_Kim_Resume.pdf';
 
@@ -38,9 +39,12 @@ const NavigationBar = () => {
 
   return (
     <nav className="navbar">
-      <div className="navbar-title">
-        {title}
-      </div>
+      <Link to="/">
+        <div className="navbar-title">
+          {title}
+        </div>
+      </Link>
+
       <div
         className="navbar-socials"
         onMouseEnter={handleMouseEnter}
