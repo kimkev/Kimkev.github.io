@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "https://kimkev.github.io/static/css/main.43802a19.css",
-    "main.js": "https://kimkev.github.io/static/js/main.0ee9f6fa.js",
+    "main.css": "https://kimkev.github.io/static/css/main.163638ff.css",
+    "main.js": "https://kimkev.github.io/static/js/main.9ec20d74.js",
     "static/js/787.82224b29.chunk.js": "https://kimkev.github.io/static/js/787.82224b29.chunk.js",
     "static/media/Kevin_Kim_Resume.pdf": "https://kimkev.github.io/static/media/Kevin_Kim_Resume.a58f9b01ddab1b7d8394.pdf",
     "index.html": "https://kimkev.github.io/index.html",
-    "main.43802a19.css.map": "https://kimkev.github.io/static/css/main.43802a19.css.map",
-    "main.0ee9f6fa.js.map": "https://kimkev.github.io/static/js/main.0ee9f6fa.js.map",
+    "main.163638ff.css.map": "https://kimkev.github.io/static/css/main.163638ff.css.map",
+    "main.9ec20d74.js.map": "https://kimkev.github.io/static/js/main.9ec20d74.js.map",
     "787.82224b29.chunk.js.map": "https://kimkev.github.io/static/js/787.82224b29.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.43802a19.css",
-    "static/js/main.0ee9f6fa.js"
+    "static/css/main.163638ff.css",
+    "static/js/main.9ec20d74.js"
   ]
 }
