@@ -41,6 +41,7 @@ const TicTacToe = () => {
         setWinner(calculateWinner(newBoard));
         // switch the current player
         setCurrentPlayer(currentPlayer === "X" ? "O" : "X");
+        console.log(currentPlayer)
 
         // the await is a hack to allow render square to finish 
         // before querying the dom element squares
@@ -85,11 +86,11 @@ const TicTacToe = () => {
     } else if (board.every((square) => square !== null)) {
         status = "It's a tie!";
     } else {
-        status = "Next player: " + (currentPlayer ? "X" : "O");
+        status = "Next player: " + currentPlayer;
     }
 
     return (
-        <div className="container">
+        <div className="container container-tictactoe">
             <div className="status">{status}</div>
             <div className="board">
                 {board.map((square, index) => renderSquare(index))}

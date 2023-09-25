@@ -7,7 +7,7 @@ const Application = () => {
     <>
       <div className="container">
         <div className="col">
-          <h2>Mini games</h2>
+          <h2>Mini Games</h2>
           <ul className="home-list col-A">
             <li>
               <Link to="/TicTacToe">TicTacToe</Link>
@@ -21,7 +21,7 @@ const Application = () => {
 
           </ul>
         </div>
-        <div className="col">
+        {/* <div className="col">
           <h2>Column 2</h2>
           <ul className="home-list col-B">
             <li>
@@ -48,7 +48,7 @@ const Application = () => {
               <Link to="#">tbd</Link>
             </li>
           </ul>
-        </div>
+        </div> */}
       </div>
     </>
   )
