@@ -31,28 +31,7 @@ const Admin = (props) => {
 
                     </ul>
                 </div>
-                <div className="col">
-                    <h2>Column 2</h2>
-                    <ul className="home-list col-B">
-                        <li>
-                        </li>
-                        <li>
-                        </li>
-                        <li>
-                        </li>
-                    </ul>
-                </div>
-                <div className="col">
-                    <h2>Column 3</h2>
-                    <ul className="home-list col-C">
-                        <li>
-                        </li>
-                        <li>
-                        </li>
-                        <li>
-                        </li>
-                    </ul>
-                </div>
+
             </div>
         </>
     )

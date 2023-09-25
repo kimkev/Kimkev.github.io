@@ -3,11 +3,14 @@
 }
 
 footer {
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
   height: var(--footer-height);
   background-color: rgb(39, 42, 44);
   padding: 20px;
-  text-align: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .Admin {

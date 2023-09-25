@@ -5,19 +5,17 @@ import './Footer.css';
 const Footer = ({ isHomePage }) => {
   return (
     <footer>
-      {/* render link if not homepage */}
-      {!isHomePage &&
-        <div id='paypal'>
-          <a href="https://paypal.me/kkim13">For the generous</a>
-        </div>
-      }
-
       <span>
         Copyright © {new Date().getFullYear()} Kevin Kim
       </span>
-
-      <div className="Admin">
-        <Link to="/admin">admin</Link>
+      {/* render link if not homepage */}
+      {!isHomePage &&
+        <div id='paypal'>
+          <a href="https://paypal.me/kkim13">PPal</a>
+        </div>
+      }
+      <div >
+        <Link className="Admin" to="/admin">admin</Link>
       </div>
     </footer>
   );
