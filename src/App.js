@@ -32,7 +32,7 @@ const App = () => {
       <div className="main-container">
         <div className="content">
           <Navigation />
-          <BackButton />
+          {/* <BackButton /> */}
           <Routes>
             <Route index element={<Home />} />
             <Route exact path='/' element={<Home />} />
