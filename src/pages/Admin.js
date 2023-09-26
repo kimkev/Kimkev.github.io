@@ -7,11 +7,61 @@ const Admin = (props) => {
 
     const [uniqueVisitors, setUniqueVisitors] = useState(0);
 
+    const apiKey = process.env.REACT_APP_GOOGLE_MEASUREMENT_PROTOCOL_API_SECRET;
+    const apiUrl = `https://analyticsdata.googleapis.com/v1beta/property/${process.env.REACT_APP_GOOGLE_TRACKING_ID}:runReport`;
+
+
+    const fetchUserCount = async () => {
+
+        const requestData = {
+            reportRequests: [
+                {
+                    metrics: [
+                        {
+                            expression: 'sessions',
+                        },
+                    ],
+                },
+            ],
+        };
+        // Create headers for the request
+        const headers = new Headers({
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${apiKey}`,
+        });
+
+        try {
+            const response = await fetch(apiUrl, {
+                method: 'POST',
+                headers,
+                body: JSON.stringify(requestData),
+            });
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+              }
+              const responseJson = response.json();
+
+              console.log(responseJson);
+            // Parse the response to get user count
+            const userCountRegex = /"\d+"/;
+            const match = data.match(userCountRegex);
+            if (match) {
+                return parseInt(match[0].replace(/"/g, ''));
+            }
+            return 0; // Default to 0 if no match found
+        } catch (error) {
+            console.error('Error fetching user count:', error);
+            return 0; // Default to 0 in case of an error
+        }
+    }
+
     useEffect(() => {
-        ReactGA.initialize(process.env.REACT_APP_GOOGLE_TRACKING_ID);
-        ReactGA.send({ hitType: "pageview", page: window.location.pathname });
-        console.log(window.location.pathname);
-        setUniqueVisitors(prevCount => prevCount + 1);
+        const getUserCount = async () => {
+            const count = await fetchUserCount();
+            console.log(count);
+            setUniqueVisitors(count);
+        }
+        // getUserCount();
     }, []);
 
 
