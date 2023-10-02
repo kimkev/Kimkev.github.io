@@ -41,7 +41,6 @@ const TicTacToe = () => {
         setWinner(calculateWinner(newBoard));
         // switch the current player
         setCurrentPlayer(currentPlayer === "X" ? "O" : "X");
-        console.log(currentPlayer)
 
         // the await is a hack to allow render square to finish 
         // before querying the dom element squares

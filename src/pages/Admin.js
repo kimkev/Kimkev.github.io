@@ -44,10 +44,10 @@ const Admin = (props) => {
               console.log(responseJson);
             // Parse the response to get user count
             const userCountRegex = /"\d+"/;
-            const match = data.match(userCountRegex);
-            if (match) {
-                return parseInt(match[0].replace(/"/g, ''));
-            }
+            // const match = data.match(userCountRegex);
+            // if (match) {
+            //     return parseInt(match[0].replace(/"/g, ''));
+            // }
             return 0; // Default to 0 if no match found
         } catch (error) {
             console.error('Error fetching user count:', error);
