@@ -1,6 +1,15 @@
+.container-typinggame {
+    flex-direction: column;
+    border-style: dashed dashed none dashed;
+    border-width: 1px;
+    border-image: linear-gradient(to bottom, white 50%, transparent 50%);
+    border-image-slice: 100%;
+    /* border-radius: 25px; */
+  }
+
 .randomText {
     font-size: 2rem;
-    margin: 3rem 2rem 3rem 2rem;
+    margin: 0 0 1rem 0;
     height: 15rem;
     overflow: auto;
     text-align: center;

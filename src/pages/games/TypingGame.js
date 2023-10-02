@@ -47,19 +47,15 @@ const TypingGame = () => {
         const wordAPI = 'https://random-word-api.herokuapp.com/word?length=3';
         const response = await fetch(wordAPI);
         const data = await response.json();
-
-        console.log(data);
         return data[0];
     }
 
     const getWords = async () => {
         const word = await getWord();
         const wordSetAPI = 'https://api.datamuse.com/words?ml=';
-        const response = await fetch(`${wordSetAPI}${word}&max=30`);
+        const response = await fetch(`${wordSetAPI}${word}&max=33`);
         const data = await response.json();
         const words = data.map(words => words.word).join(" ");
-
-        console.log(words);
         return words;
     }
 
@@ -81,8 +77,8 @@ const TypingGame = () => {
     }, [isStarted, timeRemaining]);
 
     return (
-        <div className="container">
-            <h1 className="randomText" dangerouslySetInnerHTML={getHighlightedText()} />
+        <div className="container container-typinggame">
+            <div className="randomText" dangerouslySetInnerHTML={getHighlightedText()} />
             <textarea 
                 className="input" 
                 ref={inputRef} 
