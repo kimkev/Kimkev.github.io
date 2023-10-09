@@ -1,5 +1,6 @@
 .home-container {
-    height: calc(100vh - var(--footer-height) - var(--navigation-height)); /* subtract the height of the header and footer */
+    height: calc(100vh - var(--footer-height) - var(--navigation-height));
+    /* subtract the height of the header and footer */
     overflow-y: auto;
     width: 70%;
     display: flex;
@@ -8,11 +9,15 @@
     margin: 0 auto;
 }
 
+h1 {
+    text-align: left;
+}
+
 .profile {
-    display:flex;
+    display: flex;
     flex-direction: column;
 }
 
-h1{
-    text-align: left;;
+.Intro, .Projects {
+    margin: 5%;
 }

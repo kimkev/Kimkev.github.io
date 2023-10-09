@@ -1,5 +1,5 @@
 .container {
-    padding: 5%;
+    padding: 0 5% 5% 5%;
     width: 70%;
     display: flex;
     flex-direction: row;
@@ -11,8 +11,6 @@
 .col {
     flex: 1;
     padding: 30px;
-    border: 1px dotted #fff;
-    background-color: #444;
 }
 
 .col h2 {
