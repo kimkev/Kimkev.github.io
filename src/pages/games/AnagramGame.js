@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import './AnagramGame.css';
 
 function AnagramGame() {
@@ -7,6 +7,8 @@ function AnagramGame() {
     const [guess, setGuess] = useState("");
     const [message, setMessage] = useState("");
     const [difficulty, setDifficulty] = useState('easy');
+    const [textColor, setTextColor] = useState('white');
+    const inputRef = useRef(null);
 
     const fetchWord = useCallback(async () => {
         const wordLength = {
@@ -19,7 +21,6 @@ function AnagramGame() {
             `https://random-word-api.herokuapp.com/word?length=${wordLength}`);
         const data = await response.json();
         setWord(data[0]);
-        console.log(data[0])
         let scrambledWord = data[0];
         while (scrambledWord === data[0]) {
             scrambledWord = scrambleWord(data[0])
@@ -41,13 +42,6 @@ function AnagramGame() {
         setGuess(event.target.value);
     };
 
-    const showMessage = (text) => {
-        setMessage(text);
-        setTimeout(() => {
-            setMessage("");
-        }, 3000);
-    };
-
     const handleDifficulty = (event) => {
         setDifficulty(event.target.value);
     }
@@ -58,6 +52,7 @@ function AnagramGame() {
             newGuess += word[newGuess.length];
             setGuess(newGuess);
         }
+        inputRef.current.focus();
     };
 
     useEffect(() => {
@@ -67,12 +62,14 @@ function AnagramGame() {
     useEffect(() => {
         if (guess.length === scrambledWord.length) {
             if (guess.toLowerCase() === word.toLowerCase()) {
-                showMessage("Correct");
+                setMessage('Correct! play again?');
             } else {
-                showMessage("Incorrect. Try again.");
+                setMessage('Incorrect. Try again.');
             }
+            // set color of message
+            setTextColor(message.includes('Correct') ? 'green' : 'red');
         }
-    }, [guess, scrambledWord.length, word]);
+    }, [guess, scrambledWord.length, word, message]);
 
     return (
         <div className="container container-anagram">
@@ -86,16 +83,21 @@ function AnagramGame() {
             <p className="scrambled-word">{scrambledWord}</p>
             <div className="container-input">
                 <input
+                    ref={inputRef}
                     className="input"
                     type="text"
                     value={guess}
                     onChange={handleInputChange}
                     placeholder="Guess Here"
                 />
-                <button className="hint-button" onClick={handleHint}>Hint</button>
-                <button className="playAgain-button" onClick={fetchWord}>Play again</button>
+                <div className="container-additional">
+                    <button onClick={handleHint}>Hint</button>
+                    <button onClick={fetchWord}>Play again</button>
+                </div>
             </div>
-            <h2>{message}</h2>
+            <div className="anagram-answer">
+                <p style={{ color: textColor }}>{message}</p>
+            </div>
         </div>
     );
 }
