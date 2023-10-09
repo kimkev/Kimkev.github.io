@@ -60,7 +60,7 @@ function AnagramGame() {
     }, [fetchWord]);
 
     useEffect(() => {
-        if (guess.length === scrambledWord.length) {
+        if (guess.length > 0 && guess.length === scrambledWord.length) {
             if (guess.toLowerCase() === word.toLowerCase()) {
                 setMessage('Correct! play again?');
             } else {
