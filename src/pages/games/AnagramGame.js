@@ -75,7 +75,7 @@ function AnagramGame() {
     }, [guess, scrambledWord.length, word]);
 
     return (
-        <div className="container">
+        <div className="container container-anagram">
             <h1>Guess the Word!</h1>
             <div className="difficulty-buttons">
                 <button type="button" value="easy" onClick={handleDifficulty}>Easy</button>
@@ -84,7 +84,7 @@ function AnagramGame() {
             </div>
             <p>Unscramble the word below:</p>
             <p className="scrambled-word">{scrambledWord}</p>
-            <div className="anagram-container">
+            <div className="container-input">
                 <input
                     className="input"
                     type="text"

@@ -1,3 +1,7 @@
+.container-anagram {
+    flex-direction: column;
+}
+
 .scrambled-word {
     font-size: 50px;
     font-weight: bold;
@@ -6,9 +10,9 @@
     height: 10vh;
     line-height: 10vh;
     letter-spacing: 5px;
-  }
+}
 
-.anagram-container {
+.container-input {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,6 +25,7 @@
     text-transform: lowercase;
 }
 
-.playAgain-button, .hint-button {
+.playAgain-button,
+.hint-button {
     margin-top: 20px;
 }
