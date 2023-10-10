@@ -68,6 +68,10 @@ function AnagramGame() {
             }
             // set color of message
             setTextColor(message.includes('Correct') ? 'green' : 'red');
+        } else {
+            setTimeout(() => {
+                setMessage('');
+            }, 1000);
         }
     }, [guess, scrambledWord.length, word, message]);
 
