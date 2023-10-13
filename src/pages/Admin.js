@@ -69,10 +69,10 @@ const Admin = (props) => {
         <>
             <div className="container">
                 <div className="col">
-                    <h2>Analytics</h2>
+                    <h2>WIP</h2>
                     <ul className="home-list col-A">
                         <li>
-                            <p>Total unique visitors: {uniqueVisitors}</p>
+                            <p>Count: {uniqueVisitors}</p>
                         </li>
                         <li>
                         </li>
