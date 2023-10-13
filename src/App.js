@@ -10,11 +10,11 @@ import './App.css';
 import Home from "./pages/Home";
 import Application from './pages/Application';
 import Footer from './components/Footer';
-import Lists from './pages/Lists';
+import ListApp from './pages/Lists/ListApp';
 import NoPage from "./pages/NoPage";
-import TicTacToe from './pages/games/TicTacToe';
-import TypingGame from './pages/games/TypingGame';
-import AnagramGame from './pages/games/AnagramGame';
+import TicTacToe from './pages/Games/TicTacToe';
+import TypingGame from './pages/Games/TypingGame';
+import AnagramGame from './pages/Games/AnagramGame';
 import Admin from './pages/Admin';
 
 
@@ -38,7 +38,7 @@ const App = () => {
             <Route exact path='/' element={<Home />} />
             <Route path='application' element={<Application />} /> 
             <Route path="home" element={<Home />} />
-            <Route path="lists" element={<Lists />} />
+            <Route path="ListApp" element={<ListApp />} />
             <Route path="TicTacToe" element={<TicTacToe />} />
             <Route path="TypingGame" element={<TypingGame />} />
             <Route path="AnagramGame" element={<AnagramGame />} />

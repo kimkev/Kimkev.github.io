@@ -21,21 +21,21 @@ const Application = () => {
 
           </ul>
         </div>
-        {/* <div className="col">
+        <div className="col">
           <h2>Column 2</h2>
           <ul className="home-list col-B">
             <li>
+              <Link to="/ListApp">Lists</Link>
+            </li>
+            {/* <li>
               <Link to="#">tbd</Link>
             </li>
             <li>
               <Link to="#">tbd</Link>
-            </li>
-            <li>
-              <Link to="#">tbd</Link>
-            </li>
+            </li> */}
           </ul>
         </div>
-        <div className="col">
+        {/* <div className="col">
           <h2>Column 3</h2>
           <ul className="home-list col-C">
             <li>

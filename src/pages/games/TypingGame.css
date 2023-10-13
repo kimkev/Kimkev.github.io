@@ -1,5 +1,6 @@
 .container-typinggame {
     flex-direction: column;
+    align-items: center;
     border: 1px solid transparent;
     border-style: dashed dashed none dashed;
     border-radius: 25px;

@@ -21,3 +21,12 @@ h1 {
 .Intro, .Projects {
     margin: 5%;
 }
+
+ul {
+    margin: 0;
+    padding-left: 3%;
+}
+
+ul li {
+    margin: 3%;
+}

@@ -1,0 +1,54 @@
+.container-lists {
+    justify-content: start;
+    flex-direction: column;
+    padding: 0 5% 5% 5%;
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+h2 {
+    text-align: center;
+}
+
+.container-sort {
+    margin-bottom: 10px;
+}
+
+/* Style the default select element */
+select {
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+}
+
+select {
+    margin: 50px;
+    width: 150px;
+    padding: 5px 35px 5px 5px;
+    font-size: 16px;
+    border: 1px solid #CCC;
+    height: 34px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background:url(../../../public/favicon/downArrow.ico) 96% / 20% no-repeat #EEE;
+  }
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 5px;
+    text-align: left;
+}
