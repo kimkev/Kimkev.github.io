@@ -16,7 +16,10 @@ const Home = () => {
 
           <div className="Projects">
             <h1>Projects</h1>
-            <Link to="/application">React Apps</Link>
+            <ul>
+              <li><Link to="/application">React Apps</Link></li>
+              <li><a href="https://kimkev.itch.io/">Game Development in Unity</a></li>
+            </ul>
           </div>
         </div>
 
