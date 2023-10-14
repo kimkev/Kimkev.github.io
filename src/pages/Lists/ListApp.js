@@ -71,14 +71,8 @@ const ListApp = () => {
     <>
       <div className="container-lists">
         <div>
-          <h2>Lists</h2>
+          <h3>Lists</h3>
           <div>
-            <button
-              onClick={() => fetchData('https://jsonplaceholder.typicode.com/posts', 'Sample Users')}
-              disabled={disabled}
-            >
-              Sample Users
-            </button>
             <button
               onClick={() => fetchData(`https://date.nager.at/api/v3/PublicHolidays/${currentYear}/ca`, `${currentYear} Canadian Holidays`)}
               disabled={disabled}
@@ -86,10 +80,22 @@ const ListApp = () => {
               {currentYear} Canadian Holidays
             </button>
             <button
-              onClick={() => fetchData(`https://opentdb.com/api.php?amount=10`, `Trivias`)}
+              onClick={() => fetchData(`https://opentdb.com/api.php?amount=10`, `Random Trivias`)}
               disabled={disabled}
             >
               Trivias
+            </button>
+            <button
+              onClick={() => fetchData('https://api.quotable.io/quotes/random?limit=10', 'Random Quotes')}
+              disabled={disabled}
+            >
+              Quotes
+            </button>
+            <button
+              onClick={() => fetchData('https://jsonplaceholder.typicode.com/posts', 'Sample Users')}
+              disabled={disabled}
+            >
+              Sample Users
             </button>
           </div>
         </div>
