@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const DataTable = ({ data, columns }) => {
+
 
     return (
         <table>

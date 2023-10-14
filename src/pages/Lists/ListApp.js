@@ -24,14 +24,12 @@ const ListApp = () => {
 
     try {
       const response = await fetch(apiEndpoint);
-      const data = await response.json();
-      setData(data);
-      console.log('retrieved data', data);
-
-      // Dynamically generate columns based on the API data keys
-      if (data.length > 0) {
-        setColumns(Object.keys(data[0]));
-        setSortingOption(Object.keys(data[0])[0]); // Default sorting option based on the first column
+      const jsonData = await response.json();
+      // some API endpoints share inside results
+      if (jsonData.results){
+        setData(jsonData.results);
+      }else {
+        setData(jsonData);
       }
       setTitle(dataTitle);
     } catch (error) {
@@ -61,8 +59,12 @@ const ListApp = () => {
 
 
   useEffect(() => {
-
-  }, []);
+      // Dynamically generate columns based on the API data keys
+      if (data.length > 0) {
+        setColumns(Object.keys(data[0]));
+        setSortingOption(Object.keys(data[0])[0]); // Default sorting option based on the first column
+      }
+  }, [data]);
 
 
   return (
@@ -84,10 +86,10 @@ const ListApp = () => {
               {currentYear} Canadian Holidays
             </button>
             <button
-              onClick={() => fetchData(`http://universities.hipolabs.com/search?country=canada`, `Canadian Universities`)}
+              onClick={() => fetchData(`https://opentdb.com/api.php?amount=10`, `Trivias`)}
               disabled={disabled}
             >
-              {currentYear} Canadian University List
+              Trivias
             </button>
           </div>
         </div>
