@@ -6,7 +6,6 @@ import './ListApp.css';
 const ListApp = () => {
 
   const [data, setData] = useState([]);
-  const [sortingOption, setSortingOption] = useState('name'); // Default sorting option
   const [columns, setColumns] = useState([]);
   const [title, setTitle] = useState('');
   const [disabled, setDisabled] = useState(false);
@@ -62,7 +61,6 @@ const ListApp = () => {
       // Dynamically generate columns based on the API data keys
       if (data.length > 0) {
         setColumns(Object.keys(data[0]));
-        setSortingOption(Object.keys(data[0])[0]); // Default sorting option based on the first column
       }
   }, [data]);
 
