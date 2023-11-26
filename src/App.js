@@ -28,6 +28,15 @@ const App = () => {
     trackPageview();
   }, [location]);
 
+  useEffect(() => {
+    // Update the cursor style based on the route
+    document.body.style.cursor = isHomePage ? 'none' : 'auto';
+    const links = document.getElementsByTagName('a');
+    for (let i = 0; i < links.length; i++) {
+      links[i].style.cursor = isHomePage ? 'none' : 'pointer';
+    }
+  }, [isHomePage]);
+
   return (
     <>
       <div className="main-container">
@@ -49,7 +58,7 @@ const App = () => {
             {/* should be hidden or password protected */}
             <Route path="admin" element={<Admin />} />
           </Routes>
-          <CustomCursor />
+          {isHomePage && <CustomCursor />}
         </div>
         <Footer isHomePage={isHomePage} />
       </div>
