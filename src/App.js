@@ -4,6 +4,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import BackButton from './components/BackButton';
 import { trackPageview } from './components/Analytics';
+import CustomCursor from './components/CustomCursor';
 
 import './App.css';
 
@@ -48,6 +49,7 @@ const App = () => {
             {/* should be hidden or password protected */}
             <Route path="admin" element={<Admin />} />
           </Routes>
+          <CustomCursor />
         </div>
         <Footer isHomePage={isHomePage} />
       </div>

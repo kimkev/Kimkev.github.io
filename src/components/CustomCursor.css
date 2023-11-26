@@ -1,0 +1,27 @@
+body {
+    cursor: none;
+    /* Hide the default cursor */
+}
+
+/* Apply custom cursor for links */
+a {
+    cursor: none; 
+}
+
+
+.custom-cursor {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.cursor-image {
+    background-image: url('../../public/cursor/cursor.png');
+    background-repeat: no-repeat;
+    /* Prevent image from repeating */
+    width: 32px;
+    /* Adjust the width of your custom cursor */
+    height: 32px;
+    position: absolute;
+    pointer-events: none;
+}
