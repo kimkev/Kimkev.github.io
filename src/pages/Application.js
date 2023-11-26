@@ -22,7 +22,7 @@ const Application = () => {
           </ul>
         </div>
         <div className="col">
-          <h2>Column 2</h2>
+          <h2>Mini Apps</h2>
           <ul className="home-list col-B">
             <li>
               <Link to="/ListApp">Lists</Link>
@@ -36,7 +36,7 @@ const Application = () => {
           </ul>
         </div>
         {/* <div className="col">
-          <h2>Column 3</h2>
+          <h2>Utils</h2>
           <ul className="home-list col-C">
             <li>
               <Link to="#">tbd</Link>
