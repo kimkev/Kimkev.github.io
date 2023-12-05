@@ -46,7 +46,7 @@ const App = () => {
           <Routes>
             <Route index element={<Home />} />
             <Route exact path='/' element={<Home />} />
-            <Route path='application' element={<Application />} /> 
+            <Route path='application' element={<Application />} />
             <Route path="home" element={<Home />} />
             <Route path="ListApp" element={<ListApp />} />
             <Route path="TicTacToe" element={<TicTacToe />} />

@@ -5,9 +5,12 @@ body {
 
 /* Apply custom cursor for links */
 a {
-    cursor: none; 
+    cursor: none;
 }
 
+.cursor-container {
+    overflow: hidden;
+}
 
 .custom-cursor {
     position: fixed;
@@ -24,4 +27,32 @@ a {
     height: 32px;
     position: absolute;
     pointer-events: none;
+}
+
+.sprinkle {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background-color: #ff9f06;
+    /* Sprinkle color */
+    border-radius: 50%;
+    z-index: 1;
+    animation: sprinkleFall 1s linear forwards;
+    pointer-events: none; /* Allows clicks to pass through sprinkles */
+}
+
+@keyframes sprinkleFall {
+    0% {
+        transform: translateY(0) translateX(-50%) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(50vh) translateX(-50%) scale(2);
+        opacity: 0.75;
+    }
+
+    100% {
+        transform: translateY(100vh) translateX(-50%) scale(0.5);
+        opacity: 0;
+    }
 }
