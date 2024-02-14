@@ -4,7 +4,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import BackButton from './components/BackButton';
 import { trackPageview } from './components/Analytics';
-import CustomCursor from './components/CustomCursor';
+// import CustomCursor from './components/CustomCursor';
 
 import './App.css';
 
@@ -28,14 +28,15 @@ const App = () => {
     trackPageview();
   }, [location]);
 
-  useEffect(() => {
-    // Update the cursor style based on the route
-    document.body.style.cursor = isHomePage ? 'none' : 'auto';
-    const links = document.getElementsByTagName('a');
-    for (let i = 0; i < links.length; i++) {
-      links[i].style.cursor = isHomePage ? 'none' : 'pointer';
-    }
-  }, [isHomePage]);
+
+  // Update the cursor style based on the route
+  // useEffect(() => {
+  //   document.body.style.cursor = isHomePage ? 'none' : 'auto';
+  //   const links = document.getElementsByTagName('a');
+  //   for (let i = 0; i < links.length; i++) {
+  //     links[i].style.cursor = isHomePage ? 'none' : 'pointer';
+  //   }
+  // }, [isHomePage]);
 
   return (
     <>
@@ -58,7 +59,7 @@ const App = () => {
             {/* should be hidden or password protected */}
             <Route path="admin" element={<Admin />} />
           </Routes>
-          {isHomePage && <CustomCursor />}
+          {/* {isHomePage && <CustomCursor />} */}
         </div>
         <Footer isHomePage={isHomePage} />
       </div>
