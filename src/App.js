@@ -16,6 +16,7 @@ import NoPage from "./pages/NoPage";
 import TicTacToe from './pages/Games/TicTacToe';
 import TypingGame from './pages/Games/TypingGame';
 import AnagramGame from './pages/Games/AnagramGame';
+import CardGame from './pages/Games/CardGame';
 import Admin from './pages/Admin';
 
 
@@ -53,6 +54,7 @@ const App = () => {
             <Route path="TicTacToe" element={<TicTacToe />} />
             <Route path="TypingGame" element={<TypingGame />} />
             <Route path="AnagramGame" element={<AnagramGame />} />
+            <Route path="CardGame" element={<CardGame />} />
             <Route path="*" element={<NoPage />} />
 
 

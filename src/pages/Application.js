@@ -18,7 +18,9 @@ const Application = () => {
             <li>
               <Link to="/AnagramGame">Anagram</Link>
             </li>
-
+            <li>
+              <Link to="/CardGame">CardGame</Link>
+            </li>
           </ul>
         </div>
         <div className="col">
