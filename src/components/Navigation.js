@@ -51,7 +51,7 @@ const NavigationBar = () => {
         onMouseLeave={handleMouseLeave}
       >
         <div className="navbar-socials-group">
-          Socials
+          Profile
         </div>
         {dropdownVisible &&
           <div
