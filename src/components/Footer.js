@@ -8,12 +8,6 @@ const Footer = ({ isHomePage }) => {
       <span>
         Copyright © {new Date().getFullYear()} Kevin Kim
       </span>
-      {/* render link if not homepage */}
-      {!isHomePage &&
-        <div id='paypal'>
-          <a href="https://paypal.me/kkim13">PPal</a>
-        </div>
-      }
       <div >
         <Link className="Admin" to="/admin">admin</Link>
       </div>
