@@ -11,6 +11,43 @@ Information for picking this project up:
 
 Integrated with https://github.com/gitname/react-gh-pages
 
+---
+
+This is currently a WIP
+
+## Firebase deployment (base page is deployed):
+have firebase installed 
+
+```npm install -g firebase-tools```
+
+login to firebase - opens browser
+
+```
+firebase login
+firebase login --reauth  // run this if authentication issues
+```
+
+Initialize firebase in project (root directory)
+
+```firebase init```
+
+setup process
+```
+Hosting: select hosting
+Project: Choose an existing Firebase project or create a new one.
+Public Directory: enter build (the default output directory for create-react-app).
+Single-Page App: Choose Yes when asked if this is a single-page app.
+Overwrite Files: If you’re asked to overwrite any files, you can select "No" if you have already configured your project.
+```
+
+
+run a script deploy to firebase in package.json
+```
+"deploy": "npm run build && firebase deploy"
+```
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -81,32 +118,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-
-
-
-## Firebase deployment:
-// have firebase installed 
-// npm install -g firebase-tools
-
-// login to firebase - opens browser
-// firebase login
-
-// Initialize firebase in project (root directory)
-// firebase init
-
-// setup process
-Hosting: select hosting
-Project: Choose an existing Firebase project or create a new one.
-Public Directory: enter build (the default output directory for create-react-app).
-Single-Page App: Choose Yes when asked if this is a single-page app.
-Overwrite Files: If you’re asked to overwrite any files, you can select "No" if you have already configured your project.
-
-
-Build the React App
-// npm run build
-
-run a script deploy to firebase in package.json
-// "deploy": "npm run build && firebase deploy"
-
-
