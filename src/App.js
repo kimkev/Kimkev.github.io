@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { Routes, Route, useLocation } from "react-router-dom";
 
 import Navigation from "./components/Navigation";
-import BackButton from './components/BackButton';
 import { trackPageview } from './components/Analytics';
 // import CustomCursor from './components/CustomCursor';
 
@@ -44,7 +43,6 @@ const App = () => {
       <div className="main-container">
         <div className="content">
           <Navigation />
-          {/* <BackButton /> */}
           <Routes>
             <Route index element={<Home />} />
             <Route exact path='/' element={<Home />} />
@@ -58,7 +56,6 @@ const App = () => {
             <Route path="*" element={<NoPage />} />
 
 
-            {/* should be hidden or password protected */}
             <Route path="admin" element={<Admin />} />
           </Routes>
           {/* {isHomePage && <CustomCursor />} */}

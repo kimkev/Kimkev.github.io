@@ -30,15 +30,16 @@
     stroke-dasharray: 25px;
     text-fill-color: transparent;
     -webkit-text-stroke: 2px #005c15;
-   
+
   }
+
   to {
     opacity: 1;
     stroke-dashoffset: 0;
     stroke-dasharray: 25px;
     text-fill-color: #ffffff;
     -webkit-text-stroke: 2px #005c15;
-  
+
   }
 }
 
@@ -97,7 +98,8 @@
 
 .navbar-socials-dropdown {
   position: absolute;
-  top: 100px; /* padding (50px) + content (50px) */
+  top: 100px;
+  /* padding (50px) + content (50px) */
   right: auto;
   list-style: none;
   padding: 10px;
@@ -118,4 +120,8 @@
 .navbar-socials-dropdown li {
   padding: 5px 0;
   cursor: pointer;
+}
+
+.navbar.active {
+  padding-bottom: 0;
 }
