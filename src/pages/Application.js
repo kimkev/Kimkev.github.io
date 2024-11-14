@@ -7,7 +7,7 @@ const Application = () => {
     <>
       <div className="container">
         <div className="col">
-          <h2>Mini Games</h2>
+          <h2>Mini-Games</h2>
           <ul className="home-list col-A">
             <li>
               <Link to="/TicTacToe">TicTacToe</Link>
