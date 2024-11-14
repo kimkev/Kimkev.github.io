@@ -10,16 +10,16 @@ const Apps = () => {
           <h2>Mini-Games</h2>
           <ul className="home-list col-A">
             <li>
-              <Link to="/TicTacToe">TicTacToe</Link>
-            </li>
-            <li>
-              <Link to="/TypingGame">Typing Game</Link>
+              <Link to="/TicTacToe">Tic-Tac-Toe</Link>
             </li>
             <li>
               <Link to="/AnagramGame">Anagram</Link>
             </li>
             <li>
-              <Link to="/CardGame">CardGame</Link>
+              <Link to="/TypingGame">Typing</Link>
+            </li>
+            <li>
+              <Link to="/CardGame">Mulligan</Link>
             </li>
           </ul>
         </div>
