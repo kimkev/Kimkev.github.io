@@ -8,7 +8,7 @@ import { trackPageview } from './components/Analytics';
 import './App.css';
 
 import Home from "./pages/Home";
-import Application from './pages/Application';
+import Apps from './pages/Apps';
 import Footer from './components/Footer';
 import ListApp from './pages/Lists/ListApp';
 import NoPage from "./pages/NoPage";
@@ -46,7 +46,7 @@ const App = () => {
           <Routes>
             <Route index element={<Home />} />
             <Route exact path='/' element={<Home />} />
-            <Route path='application' element={<Application />} />
+            <Route path='Apps' element={<Apps />} />
             <Route path="home" element={<Home />} />
             <Route path="ListApp" element={<ListApp />} />
             <Route path="TicTacToe" element={<TicTacToe />} />

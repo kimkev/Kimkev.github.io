@@ -17,7 +17,7 @@ const Home = () => {
           <div className="Projects">
             <h1>Projects</h1>
             <ul>
-              <li><Link to="/application">Client-side Web Apps</Link></li>
+              <li><Link to="/apps">Client-side Web Apps</Link></li>
               <li><a href="https://kimkev.itch.io/">Game Development in Unity</a></li>
             </ul>
           </div>

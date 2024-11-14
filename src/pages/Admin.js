@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./Application.css";
+import "./Apps.css";
 import ReactGA from 'react-ga4';
 import { debounce } from "lodash";
 

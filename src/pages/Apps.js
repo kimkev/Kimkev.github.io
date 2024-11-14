@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Application.css";
+import "./Apps.css";
 
-const Application = () => {
+const Apps = () => {
   return (
     <>
       <div className="container">
@@ -56,4 +56,4 @@ const Application = () => {
   )
 };
 
-export default Application;
+export default Apps;
