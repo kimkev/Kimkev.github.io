@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "https://kimkev.github.io/static/css/main.ff63e98d.css",
-    "main.js": "https://kimkev.github.io/static/js/main.942e95f4.js",
+    "main.css": "https://kimkev.github.io/static/css/main.2bb40149.css",
+    "main.js": "https://kimkev.github.io/static/js/main.e59cd7ec.js",
     "static/js/787.82224b29.chunk.js": "https://kimkev.github.io/static/js/787.82224b29.chunk.js",
     "static/media/Kevin_Kim_Resume.pdf": "https://kimkev.github.io/static/media/Kevin_Kim_Resume.a58f9b01ddab1b7d8394.pdf",
     "static/media/downArrow.ico": "https://kimkev.github.io/static/media/downArrow.a954229637bea88f41e5.ico",
     "index.html": "https://kimkev.github.io/index.html",
-    "main.ff63e98d.css.map": "https://kimkev.github.io/static/css/main.ff63e98d.css.map",
-    "main.942e95f4.js.map": "https://kimkev.github.io/static/js/main.942e95f4.js.map",
+    "main.2bb40149.css.map": "https://kimkev.github.io/static/css/main.2bb40149.css.map",
+    "main.e59cd7ec.js.map": "https://kimkev.github.io/static/js/main.e59cd7ec.js.map",
     "787.82224b29.chunk.js.map": "https://kimkev.github.io/static/js/787.82224b29.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ff63e98d.css",
-    "static/js/main.942e95f4.js"
+    "static/css/main.2bb40149.css",
+    "static/js/main.e59cd7ec.js"
   ]
 }
