@@ -10,7 +10,7 @@ import './App.css';
 import Home from "./pages/Home";
 import Apps from './pages/Apps';
 import Footer from './components/Footer';
-import ListApp from './pages/Lists/ListApp';
+import ListApp from './pages/Data/ListApp';
 import NoPage from "./pages/NoPage";
 import TicTacToe from './pages/Games/TicTacToe';
 import TypingGame from './pages/Games/TypingGame';

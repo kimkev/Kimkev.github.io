@@ -24,7 +24,7 @@ const Apps = () => {
           </ul>
         </div>
         <div className="col">
-          <h2>Mini Apps</h2>
+          <h2>Data</h2>
           <ul className="home-list col-B">
             <li>
               <Link to="/ListApp">Lists</Link>
