@@ -10,13 +10,17 @@ import './App.css';
 import Home from "./pages/Home";
 import Apps from './pages/Apps';
 import Footer from './components/Footer';
-import ListApp from './pages/Data/ListApp';
 import NoPage from "./pages/NoPage";
+import Admin from './pages/Admin';
+// Games
 import TicTacToe from './pages/Games/TicTacToe';
 import TypingGame from './pages/Games/TypingGame';
 import AnagramGame from './pages/Games/AnagramGame';
 import CardGame from './pages/Games/CardGame';
-import Admin from './pages/Admin';
+// Data apps
+import ListApp from './pages/Data/ListApp';
+import Chart from './pages/Data/Chart';
+
 
 
 const App = () => {
@@ -46,16 +50,19 @@ const App = () => {
           <Routes>
             <Route index element={<Home />} />
             <Route exact path='/' element={<Home />} />
-            <Route path='Apps' element={<Apps />} />
             <Route path="home" element={<Home />} />
-            <Route path="ListApp" element={<ListApp />} />
+            <Route path='Apps' element={<Apps />} />
+            {/* Games */}
             <Route path="TicTacToe" element={<TicTacToe />} />
             <Route path="TypingGame" element={<TypingGame />} />
             <Route path="AnagramGame" element={<AnagramGame />} />
             <Route path="CardGame" element={<CardGame />} />
+            {/* Data Apps */}
+            <Route path="ListApp" element={<ListApp />} />
+            <Route path="Chart" element={<Chart />} />
+            
+            {/* Misc */}
             <Route path="*" element={<NoPage />} />
-
-
             <Route path="admin" element={<Admin />} />
           </Routes>
           {/* {isHomePage && <CustomCursor />} */}

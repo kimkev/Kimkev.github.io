@@ -29,10 +29,10 @@ const Apps = () => {
             <li>
               <Link to="/ListApp">Lists</Link>
             </li>
-            {/* <li>
-              <Link to="#">tbd</Link>
-            </li>
             <li>
+              <Link to="/Chart">Chart</Link>
+            </li>
+            {/* <li>
               <Link to="#">tbd</Link>
             </li> */}
           </ul>
